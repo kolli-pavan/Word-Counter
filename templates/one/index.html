@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+
+<html>
+    <head> 
+        <title>Front Page</title>
+        <style> 
+            html,body{
+                width:100%;
+                height:100%;
+                margin:0px;
+            }
+            body{ 
+                background-color:black; 
+                color:red;
+                display:flex;
+                margin:auto;
+            }
+            textarea{ 
+                border:4px solid blue;
+                font-size:125%;
+                width:100%;
+                height:75%;
+            }
+            form{ 
+                width:80%; 
+                height:90vh; 
+                margin:auto;
+                text-align: center;
+                
+            }
+            .btn{
+                padding:5px;
+                background-color:green;
+                color:white;
+                border:2px solid white;
+                font-size:200%;
+            }
+
+            img{
+                height:3vh; 
+                width:5%;
+                position:relative;
+                border:2px solid white;
+                border-radius:6px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <form action="{% url 'count' %}" method="post"> 
+            {% csrf_token%}
+            {% load static %}
+            
+            <h1><img src="{% static 'one/MY_PIC.jpg' %}"   alt="My image"> Word Counter</h1>
+            <textarea  name="message" placeholder="Enter text here...."></textarea>
+            <br><br>
+            <input type="submit" class="btn" value="count">
+        </form>
+        
+
+    </body>
+</html>

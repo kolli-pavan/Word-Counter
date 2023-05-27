@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result Page</title>
+        <style>
+            body{ 
+                background-color:black;
+                width:100%;
+                margin:auto;
+                text-align:center;
+                color:white;
+            }
+
+            .text{
+                width:80%;
+                margin:auto;
+                border:2px solid blue;
+                color:black;
+                background-color:white;
+                font-size:150%;
+            }
+
+            a{
+                text-decoration:none;
+                color:White;
+            }
+            
+        </style>
+    </head>
+    
+    
+
+    <body>
+        <h1>Your Text is </h1>
+        <div class="text">
+            {{msg}}
+        </div>
+
+
+        <h2>It contains <span style="color:red; font-size:200%">{{len}}</span> words</h2>
+
+        <br>
+        <br>
+
+        <a href="{%url 'home' %}">Go Back</a>
+    </body>
+</html>
